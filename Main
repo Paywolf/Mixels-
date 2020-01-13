@@ -1,0 +1,33 @@
+from tkinter.filedialog import askopenfilename
+import random
+filename = askopenfilename()
+with open(filename, 'r') as fileobj:
+    contents = fileobj.read()
+# contentline = fileobj.readlines()
+
+
+
+class Robot:
+    def introduce_self(self):
+        print(f"My name is {self.name}, I have ")
+
+
+mystery_int = random.randint(0, 5)
+gem_color = ["Emerald Green", "Java Brown", "Amethyst Violet", "Lightning Gold", "Citrine Orange"] #add weights
+name_list = contents
+
+r1 = Robot()
+r1.name = "Tom"
+r1.color = "Ruby Red"
+r1.weight = 30
+r1.introduce_self()
+
+r2 = Robot()
+r2.name = "Jerry"
+r2.color = "Sapphire Blue"
+r1.weight = 40
+r2.introduce_self()
+
+r3 = Robot()
+r3.name = random.choice(contents)
+r3.color = random.choice()
